@@ -77,5 +77,4 @@ Previsto para a entrega final: tela inicial com instruções, ranking com nome, 
 - [Pygame](https://www.pygame.org/) (licença LGPL) e [pytest](https://pytest.org/) (licença MIT).
 - Template oficial da disciplina: [IntroAlgs_pygame_template](https://github.com/ICEI-PUC-Minas-PPL-CDIA/IntroAlgs_pygame_template).
 - Fonte padrão do Pygame (FreeSansBold, distribuída com o Pygame).
-- Assistente de IA (Claude, da Anthropic) usado como apoio na escrita do código e da documentação.
 - Os posts do jogo são fictícios.
