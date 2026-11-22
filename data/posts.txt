@@ -1,0 +1,40 @@
+# Banco de posts do jogo "Confere Aí!"
+# Formato: tipo;texto   (tipo = real ou falso)
+# Linhas começando com # são ignoradas. Todos os posts são fictícios.
+#
+# Posts REAIS: citam fonte oficial, têm data/local, não pedem pressa nem dados.
+real;Prefeitura divulga horários de vacinação no site oficial
+real;Defesa Civil emite alerta de chuva forte pelo canal oficial
+real;Banco lembra: ele nunca pede sua senha por mensagem
+real;Universidade publica calendário de provas no portal do aluno
+real;Médica usa IA na triagem e revisa cada laudo antes de liberar
+real;App de mapas avisa sobre obra e sugere rota alternativa
+real;Professor ensina a citar fontes ao usar assistentes de IA
+real;Empresa avisa: o chatbot pode errar, fale com um atendente
+real;Agência de checagem confirma vídeo original com data e local
+real;Biblioteca libera e-books gratuitos para estudantes
+real;Loja confirma a promoção no próprio site e no aplicativo
+real;Escola envia comunicado com o telefone oficial da secretaria
+real;Tradutor automático ajuda, mas recomenda revisão humana
+real;Estudo revisado por especialistas sai em revista científica
+real;Hospital informa no site como agendar consultas pelo app
+real;Prefeitura anuncia mutirão de limpeza com data e endereço
+#
+# Posts FALSOS: sensacionalismo, urgência, sinais de imagem/áudio gerados por IA,
+# promessas fáceis ou pedidos de dados pessoais.
+falso;URGENTE: compartilhe antes que apaguem este vídeo!
+falso;Foto viral mostra político com seis dedos em comício
+falso;Áudio do seu chefe pede PIX urgente para um fornecedor
+falso;Cientistas anônimos: água gelada cura gripe em 1 hora
+falso;Banco pede sua senha por mensagem para atualizar cadastro
+falso;Vídeo de famoso oferece celular de graça, é só clicar no link
+falso;IA prevê o fim do mundo para a próxima sexta-feira
+falso;Ganhe R$ 5.000 por dia só respondendo perguntas de uma IA
+falso;Print de notícia sem data e sem site de origem viraliza
+falso;Imagem mostra tubarão nadando na avenida depois da chuva
+falso;App de conversa vai cobrar R$ 10 por mês a partir de amanhã
+falso;Perfil criado ontem divulga notícia exclusiva bombástica
+falso;Chatbot cita lei que proíbe estudar depois das 22h
+falso;Teste grátis: a IA adivinha seu futuro, envie CPF e selfie
+falso;Remédio milagroso emagrece 10 kg em 3 dias, dizem médicos
+falso;Vídeo mostra ponte flutuando no céu durante a madrugada

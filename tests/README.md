@@ -5,6 +5,7 @@ Esta pasta contem testes automatizados do projeto.
 ## Arquivos
 
 - `test_logica.py`: valida funcoes puras de logica em `src/funcoes.py`.
+- `test_dados.py`: valida a leitura do banco de posts e do recorde em `src/dados.py`.
 
 ## Como executar
 
