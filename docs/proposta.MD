@@ -11,7 +11,9 @@ Introdução a Algoritmos (PUC Minas, 2026/2) · Projeto Final "Jogos para o Fut
 ## 2. Integrantes do grupo
 
 - Nome 1: Victhor Guilherme Santos Loiola
-- Nome 2: Pietro Lage
+- Nome 2: Pietro Lage Gomes Fernandes
+- Nome 3: —
+- Nome 4: —
 
 ## 3. Tema escolhido
 
@@ -142,4 +144,5 @@ O grupo declara que o jogo "Confere Aí!" é uma proposta própria, desenvolvida
 
 ## 21. Histórico de atualizações
 
-- **22/11/2026 (Entrega 2):** proposta preenchida junto com a primeira versão executável. Já funcionam: janela e loop principal, movimento do feed, posts caindo com rótulo da IA, verificação por clique/ESPAÇO, pontos, vidas, bônus de verificação, vitória/derrota, tela de resumo, reinício, leitura de `data/posts.txt`, recorde em arquivo e 40 testes. Falta para a entrega final: tela inicial, ranking com nome, dificuldade progressiva e ajustes de jogabilidade a partir do acompanhamento em aula.
+- **Entrega 1:** proposta inicial preenchida (planejamento).
+- **Entrega 2 (22/11/2026):** primeira versão executável, sem mudanças no planejamento. Já funcionam: janela e loop principal, movimento do feed, posts caindo com rótulo da IA, verificação por clique/ESPAÇO, pontos, vidas, bônus de verificação, vitória/derrota, tela de resumo, reinício, leitura de `data/posts.txt`, recorde em arquivo e 40 testes. Falta para a entrega final: tela inicial, ranking com nome, dificuldade progressiva e ajustes de jogabilidade a partir do acompanhamento em aula.
