@@ -1,68 +1,57 @@
-# Nome do Jogo
+# Confere Aí!
 
-Projeto final da disciplina de Introdução a Algoritmos/Programação, desenvolvido com Python e Pygame.
+Projeto final da disciplina de Introdução a Algoritmos (PUC Minas, 2026/2), desenvolvido com Python e Pygame a partir do template oficial da disciplina.
 
-Este repositório é um template para os grupos da disciplina. A proposta é começar com uma base funcional e evoluir o jogo ao longo do semestre.
+**Tema:** IA no Cotidiano e Uso Responsável, com foco em **confiabilidade de sistemas inteligentes** e **conteúdos reais e artificiais**.
 
 ## Integrantes do grupo
 
-- Nome do integrante 1
-- Nome do integrante 2
-- Nome do integrante 3
-- Nome do integrante 4
+- Victhor Guilherme Santos Loiola
+- Pietro Lage
 
 ## Estrutura do projeto
 
 - `main.py`: ponto de entrada da aplicação.
-- `src/`: código-fonte principal do jogo (loop, regras, sprites e dados).
-- `assets/`: imagens, fontes e sons.
-- `data/`: arquivos persistentes (recorde/ranking).
+- `src/config.py`: constantes de tela, cores, regras e caminhos de arquivos.
+- `src/funcoes.py`: regras do jogo sem Pygame (pontos, vidas, IA simulada, verificações).
+- `src/dados.py`: leitura e gravação de arquivos (recorde e banco de posts).
+- `src/jogo.py`: loop principal, eventos, atualização e desenho na tela.
+- `src/sprites.py`: recorte de spritesheet (mantido do template; não usado nesta versão).
+- `assets/`: imagens, fontes e sons (vazia nesta versão, exceto o spritesheet do template).
+- `data/posts.txt`: banco de posts lido pelo jogo (`tipo;texto`).
+- `data/recorde.txt`: melhor pontuação.
 - `tests/`: testes unitários com `pytest`.
-- `docs/`: documentação do projeto, incluindo proposta inicial.
+- `docs/proposta.MD`: proposta do jogo.
 
 ## Descrição do jogo
 
-Descreva brevemente a ideia principal do jogo.
+Posts de uma rede social caem do topo da tela. Um **assistente de IA** coloca em cada post um rótulo ("IA: REAL 92%" ou "IA: FALSO? 58%"), mas ele **pode errar**, principalmente quando a confiança é baixa. O jogador controla o **SEU FEED**, uma barra no rodapé: encostar em um post significa compartilhá-lo, e deixá-lo cair significa barrá-lo. Para os casos duvidosos, o jogador pode gastar uma **verificação** e conferir a fonte.
 
-Exemplo:
-
-> O jogo consiste em controlar um personagem que deve coletar moedas e evitar obstáculos. O jogador ganha pontos ao coletar itens e perde vidas ao colidir com obstáculos. A partida termina quando o tempo acaba ou quando o jogador perde todas as vidas.
+A ideia é mostrar, na própria jogabilidade, que a IA ajuda, mas o resultado precisa ser analisado com senso crítico antes de compartilhar.
 
 ## Objetivo do jogador
 
-Explique o que o jogador precisa fazer para vencer ou avançar no jogo.
-
-Exemplo:
-
-> O objetivo é coletar a maior quantidade possível de itens antes que o tempo acabe, evitando colisões com os obstáculos.
+Chegar a **150 pontos** montando um feed confiável, sem perder as 3 vidas.
 
 ## Regras do jogo
 
-Liste as principais regras do jogo.
-
-Exemplo:
-
-- O jogador se movimenta usando as setas do teclado.
-- Cada item coletado aumenta a pontuação.
-- Colidir com um obstáculo reduz a quantidade de vidas.
-- A partida termina quando o jogador perde todas as vidas ou quando o tempo acaba.
+- O jogador começa com 3 vidas e 3 verificações (máximo de 5).
+- Post **real** no feed: +10 pontos. Post **falso** barrado (caiu): +5 pontos.
+- Post **falso** no feed: −1 vida. Post **real** que caiu: −5 pontos.
+- Clicar em um post (ou ESPAÇO) gasta 1 verificação e revela a verdade. A cada 50 pontos ganha +1 verificação.
+- O rótulo da IA acerta com a probabilidade da confiança mostrada. Rótulos abaixo de 70% aparecem em amarelo, com "?".
+- Vitória: 150 pontos. Derrota: 0 vidas. No fim aparece um resumo com o desempenho do jogador e da IA.
 
 ## Controles
 
-Informe as teclas ou comandos utilizados no jogo.
-
-Exemplo:
-
-- Seta para cima: mover para cima
-- Seta para baixo: mover para baixo
-- Seta para esquerda: mover para esquerda
-- Seta para direita: mover para direita
-- Espaço: realizar ação
+- Seta para esquerda / A: mover o feed para a esquerda
+- Seta para direita / D: mover o feed para a direita
+- Clique do mouse em um post: verificar aquele post
+- Espaço: verificar o post mais próximo do feed
+- R: jogar de novo (após o fim da partida)
 - ESC: sair do jogo
 
 ## Como executar o projeto
-
-### 1. Clonar o repositório
 
 ```bash
 git clone LINK_DO_REPOSITORIO
@@ -77,15 +66,16 @@ python main.py
 python -m pytest
 ```
 
-## Checklist mínimo para entrega
+## Estado atual (Entrega 2 – versão parcial, 22/11/2026)
 
-- Preencher este README com nome final, descrição real, regras e controles do jogo.
-- Atualizar `docs/proposta.MD` com a proposta do grupo.
-- Garantir que o jogo executa com `python main.py`.
-- Garantir que os testes passam com `pytest`.
+Pronto: janela e loop principal, movimento do feed, posts com rótulo da IA, verificação, pontos, vidas, vitória/derrota, tela de resumo, reinício, leitura de `data/posts.txt`, recorde em arquivo e testes das funções de lógica e de arquivos.
 
-## Observações para os alunos
+Previsto para a entrega final: tela inicial com instruções, ranking com nome, dificuldade progressiva e ajustes a partir do acompanhamento em aula.
 
-- Mantenham o código organizado em módulos pequenos e com responsabilidade clara.
-- Comentem partes importantes da lógica, principalmente regras do jogo.
-- Registrem decisões técnicas no README do grupo ao longo do desenvolvimento.
+## Recursos externos
+
+- [Pygame](https://www.pygame.org/) (licença LGPL) e [pytest](https://pytest.org/) (licença MIT).
+- Template oficial da disciplina: [IntroAlgs_pygame_template](https://github.com/ICEI-PUC-Minas-PPL-CDIA/IntroAlgs_pygame_template).
+- Fonte padrão do Pygame (FreeSansBold, distribuída com o Pygame).
+- Assistente de IA (Claude, da Anthropic) usado como apoio na escrita do código e da documentação.
+- Os posts do jogo são fictícios.
